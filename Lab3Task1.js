@@ -154,7 +154,7 @@ function drawDiamond(gl, u_ModelMatrix, modelMatrix, angle, scale) {
     modelMatrix.scale(scale, scale, 1);
     gl.uniformMatrix4fv(u_ModelMatrix, false, modelMatrix.elements);
     gl.drawArrays(gl.LINE_LOOP, 4, 4); // Draw the diamond as a line loop (using different vertex offset)
-
+}
 function initVertexBuffers(gl, a_Position, a_Color) {
     // Interleaved data for both square and diamond
     var interleavedData = new Float32Array([
@@ -192,4 +192,4 @@ function initVertexBuffers(gl, a_Position, a_Color) {
 
     return n;
 }
-}
+
